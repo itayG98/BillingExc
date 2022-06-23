@@ -100,12 +100,10 @@ namespace BillingExc
             }
         }
 
-#if
-        public void SortCostuArr() 
+        public void SortCostuArr() //FixMe
         {
             Array.Sort(CostumersArr,0,CostumerCounter); 
         }
 
-#endif
     }
 }
