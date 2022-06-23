@@ -28,8 +28,11 @@ namespace BillingExc
             bs.AddCostumer(new RegualrCosumer("Shon", -10.5));
             bs.AddCostumer(new RegualrCosumer("David", -10.5));
 
-            bs.addToBalance(100);
+            bs.AddToBalance(100);
             Console.WriteLine(bs.ToString());
+
+/*            bs.SortCostuArr();
+*/            Console.WriteLine(bs);
 
             Console.ReadLine();
         }

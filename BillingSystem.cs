@@ -32,12 +32,13 @@ namespace BillingExc
 
         public Costumer this[int index]
         {
-            get {
-                if (index > CostumerCounter-1 || index<0 ) 
+            get
+            {
+                if (index > CostumerCounter - 1 || index < 0)
                 {
                     return null;
                 }
-                    return CostumersArr[index];
+                return CostumersArr[index];
             }
         }
 
@@ -45,11 +46,11 @@ namespace BillingExc
         {
             get
             {
-                for (int i = 0 ; i < CostumerCounter; i++)
-                    {
+                for (int i = 0; i < CostumerCounter; i++)
+                {
                     if (CostumersArr[i].Name == name)
                         return i;
-                    }
+                }
                 return -1;
             }
         }
@@ -91,12 +92,20 @@ namespace BillingExc
             return sb.ToString();
         }
 
-        public void addToBalance(double amount)
+        public void AddToBalance(double amount)
         {
             for (int i = 0; i < CostumerCounter; i++)
             {
                 CostumersArr[i].AddedToBalance(amount);
             }
         }
+
+#if
+        public void SortCostuArr() 
+        {
+            Array.Sort(CostumersArr,0,CostumerCounter); 
+        }
+
+#endif
     }
 }
