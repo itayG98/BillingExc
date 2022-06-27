@@ -1,8 +1,10 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
+using System.Runtime;
 
 namespace BillingExc
 {
-    public abstract class Costumer
+    public abstract class Costumer : IComparable
     {
         private string _name;
         private double _balance;
@@ -42,6 +44,14 @@ namespace BillingExc
         public override string ToString()
         {
             return $"{Name}\t\t{ID} \tbalance :{Balance:c}";
+        }
+
+        public int CompareTo(object obj)
+        {
+            Costumer other = obj as Costumer;
+            if (other == null)
+                throw new ArgumentException("Obj is not costumer");
+            return Name.CompareTo(other.Name); 
         }
     }
 }

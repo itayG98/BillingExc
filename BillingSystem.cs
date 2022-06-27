@@ -68,7 +68,7 @@ namespace BillingExc
 
         public void AddCostumer(Costumer c)
         {
-            if (IsFull) 
+            if (IsFull)
             {
                 throw new TooManyCustomersExcpetion("The billing system is full ", LIMIT);
             }
@@ -101,10 +101,9 @@ namespace BillingExc
             }
         }
 
-        public void SortCostuArr() //FixMe
+        public void SortCostuArr()
         {
-            Array.Sort(CostumersArr,0,CostumerCounter); 
+            Array.Sort(CostumersArr, 0, CostumerCounter);
         }
-
     }
 }

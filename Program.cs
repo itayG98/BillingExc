@@ -29,9 +29,9 @@ namespace BillingExc
 
             bs.AddToBalance(100);
             Console.WriteLine(bs.ToString());
-
-/*            bs.SortCostuArr();
-*/            Console.WriteLine(bs);
+            /*-------------------------------------------*/
+            bs.SortCostuArr();
+            Console.WriteLine(bs);
 
             Console.ReadLine();
         }
