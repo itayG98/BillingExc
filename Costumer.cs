@@ -39,7 +39,6 @@ namespace BillingExc
         }
 
         public abstract void AddedToBalance(double amount);
-
         public override string ToString()
         {
             return $"{Name}\t\t{ID} \tbalance :{Balance:c}";

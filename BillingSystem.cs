@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BillingExc
 {
@@ -71,12 +68,16 @@ namespace BillingExc
 
         public void AddCostumer(Costumer c)
         {
-            if (CostumerCounter < LIMIT && IsFull == false)
+            if (IsFull) 
+            {
+                throw new TooManyCustomersExcpetion("The billing system is full ", LIMIT);
+            }
+            else if (CostumerCounter < LIMIT && IsFull == false)
             {
                 _costumersArr[CostumerCounter] = c;
                 CostumerCounter++;
             }
-            if (CostumerCounter >= LIMIT && IsFull == false)
+            else if (CostumerCounter >= LIMIT && IsFull == false)
             {
                 _isFull = true;
             }

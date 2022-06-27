@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BillingSystem.cs" />
     <Compile Include="Costumer.cs" />
+    <Compile Include="Exception.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegualrCosumer.cs" />
